@@ -1,0 +1,64 @@
+local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+
+WindUI:AddTheme({
+    Name = "My Theme", -- theme name
+    
+    -- example of gradient (available for all values. e.g. Button, Icon, Text...)   --
+    Accent = WindUI:Gradient({                                                      
+        ["0"] = { Color = Color3.fromHex("#1f1f23"), Transparency = 30 },            
+        ["100"]   = { Color = Color3.fromHex("#18181b"), Transparency = 30 },        
+    }, {                                                                            
+        Rotation = 0,                                                               
+    }),                                                                             
+    
+})
+
+local Window = WindUI:CreateWindow({
+    Title = "Apex hub",
+    Icon = "door-open", -- lucide icon. optional
+    Author = "by v0rtify", -- optional
+})
+
+local Tab = Window:Tab({
+    Title = "buttons",
+    Icon = "bird", -- optional
+    Locked = false,
+})
+
+local Button = Tab:Button({
+    Title = "infinite",
+    Desc = "infinte train",
+    Locked = false,
+    Callback = function()
+        local args = {
+    100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("Train"):FireServer(unpack(args))
+    end
+})
+
+local Button = Tab:Button({
+    Title = "infininte",
+    Desc = "sell",
+    Locked = false,
+    Callback = function()
+        local args = {
+    100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    1
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("SellWeapon"):FireServer(unpack(args))
+    end
+})
+
+local Button = Tab:Button({
+    Title = "infinte",
+    Desc = "craft",
+    Locked = false,
+    Callback = function()
+        local args = {
+    7488000000000001000,
+ 100000000000000000000000000000000000000
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Event"):WaitForChild("SellWeapon"):FireServer(unpack(args))
+    end
+})
